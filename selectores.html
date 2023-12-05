@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectores</title>
+    <style>
+
+         /* Estilos generales del cuerpo del documento */
+        body {
+            background-color:white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+         /* Estilos para el contenedor del formulario */
+        #form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        
+           /* Estilos para el formulario */
+        form {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            text-shadow: 1px 1px 7px black;
+        }
+    </style>
+
+        <!--Funcion para mostrar una alerta al enviar el formulario-->
+    <script type="text/javascript">
+        function envio() {
+            alert("se enviaron los datos de registro");
+        }
+
+         //Funcion para mostrar una confirmacion antes de enviar el formulario
+        function confirmacion() {
+            var retval = confirm("desea continuar con el envio");
+            if (retval == true) {
+                var Formulario = document.getElementById('form1');
+                return true;
+            } else {
+                document.write("no se enviaron los datos");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+
+     <!-- Contenedor del formulario -->
+    <div id="form-container">
+
+         <!-- Logo de la empresa -->
+        <img src="celliphone.png" alt="Logo de tu empresa" width="100" height="100">
+        <br>
+        <br>
+          <!-- Formulario con campos -->
+        <form action="mailto:florespintorodrigo@mail.com" id="form1" name="form1" method="post">
+            <input type="text" placeholder="nombre">
+            <br>
+            <br>
+            <input type="text" placeholder="apellido">
+            <br>
+            <br>
+            <input type="email" placeholder="correo">
+            <br>
+            <br>
+            <input type="text" placeholder="telefono">
+            <br>
+            <br>
+            <input type="text" placeholder="ci">
+            <br>
+            <br>
+            <input type="text" placeholder="ciudad">
+            <br>
+            <br>
+            <input type="checkbox" required>acepto los terminos y condiciones
+            <br>
+            <br>
+            <textarea rows="6" placeholder="introduzca su mensaje"></textarea>
+            <br>
+            <br>
+
+             <!-- Boton de envio con llamadas a funciones JavaScript -->
+            <button type="submit" onclick="envio(); confirmacion()">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

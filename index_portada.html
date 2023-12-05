@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <style>
+        body {
+              /* Estilos generales para el cuerpo del documento */
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+              /* Estilos para el formulario de registro */
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid green;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+          /* Estilos para las etiquetas dentro del formulario */
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+         
+          /* Estilos para los campos de entrada y select dentro del formulario */
+          input,
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+         
+          /* Estilos para el boton de envio del formulario */
+        button {
+            background-color: #4caf50;
+            color: green;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+           /* Estilos adicionales para el boton cuando se pasa el raton por encima */
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+      <!-- Inicio del formulario -->
+    <form>
+         <!-- Imagen del logo -->
+        <img src="celliphone.png" alt="Logo" style="max-width: 100%; margin-top: 16px;">
+
+          <!-- Titulo del formulario -->
+        <h2>Registro</h2>
+
+            <!-- Campo de entrada para el nombre -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+            <!-- Campo de entrada para el apellido-->
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+            <!-- Campo de entrada para el email -->
+        <label for="email">Correo Electronico:</label>
+        <input type="email" id="email" name="email" required>
+            <!-- Campo de entrada para el telefono -->
+        <label for="telefono">Numero de Telefono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+          <!-- Campo de entrada para seleccionar la ciudad -->
+        <label for="ciudades">en que parte de bolivia te encuentras:</label>
+        <select id="ciudades" name="ciudades[]" multiple required>
+            <option value="la-paz">La Paz</option>
+            <option value="santa-cruz">Santa Cruz</option>
+            <option value="cochabamba">Cochabamba</option>
+            <option value="sucre">Sucre</option>
+            <option value="potosi">potosi</option>
+            <option value="oruro">Oruro</option>
+            <option value="tarija">Tarija</option>
+            <option value="beni">Beni</option>
+            <option value="pando">Pando</option>
+        </select>
+         <!-- Boton de aceptar con un enlace a "index3.html" -->
+        <button onclick="window.location.href='index3.html'">
+            <a href="index3.html">aceptar</a>
+        </button>
+    </form>
+
+</body>
+</html>
+
+        
